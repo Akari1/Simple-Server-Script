@@ -130,7 +130,7 @@ beforeChatMessage: function(src, message) {
                         sys.sendMessage(src, "/clear: to clear the list of your pokemon bans");
                         sys.sendMessage(src, "/imp: to impersonate someone");
                         sys.sendMessage(src, "/impOff : to stop impersonating.");
-                        if (sys.auth(src) < 1)
+                        if (sys.auth(src) < 0)
                                 return;
                         sys.sendMessage(src, "*** Moderator Commands ***");
                         sys.sendMessage(src, "/imp [person] : to impersonate someone");
@@ -142,7 +142,7 @@ beforeChatMessage: function(src, message) {
                         sys.sendMessage(src, "/mute [name]:[reason]:[time] : to mute someone. Time is optional and defaults to 12 hours.");
                         sys.sendMessage(src, "/footstomp: to stomp on somebody");
                         sys.sendMessage(src, "/unmute [person] : let someone have their speach back.");
-                        if (sys.auth(src) < 2)
+                        if (sys.auth(src) < 1)
                                 return;
                         sys.sendMessage(src, "*** Administrator Commands ***");
                         sys.sendMessage(src, "/reset: to reset the server variables (useful when you add a new script)");
@@ -155,7 +155,7 @@ beforeChatMessage: function(src, message) {
                         sys.sendMessage(src, "/unban [name]: To unban a user.");
                         sys.sendMessage(src, "/changeAuth [auth] [person]: to play the mega admin");
                         sys.sendMessage(src, "/setPA paname: to add a new pa, use with scripting caution");
-                        if (sys.auth(src) < 3)
+                        if (sys.auth(src) < 2)
                                 return;
                         sys.sendMessage(src, "*** Owner Commands ***");
                         sys.sendMessage(src, "/reset: to reset the server variables (useful when you add a new script)");
